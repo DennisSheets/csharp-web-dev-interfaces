@@ -18,7 +18,14 @@ namespace IceCreamShop
 
         public override string ToString()
         {
-            return "Name: " + Name + "\n" + "Cost: $" + Cost + "\n" + "Allergens: " + Allergens + "\n";
+            //return "Name: " + Name + "\n" + "Cost: $" + Cost + "\n" + "Allergens: " + Allergens + "\n";
+
+            return  $"{String.Format("{0,-18}", Name)} " +
+
+                    $"{String.Format("${0:0.00}", Cost)}  " +   //same result as the line below
+                    //$"{String.Format("{0,-6:C2} ", Cost)}  " +
+
+                    $"  Allergens: {string.Join(" ", Allergens)}"; 
         }
     }
 }
