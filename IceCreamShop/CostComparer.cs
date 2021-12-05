@@ -19,7 +19,7 @@ namespace IceCreamShop
             //    return 1;
             //};
 
-            return x.Cost < y.Cost ? -1 : 1;
+            return x.Cost < y.Cost ? -1 : 1;     // Ternary version of if/else logic from above
         }
     }
 }

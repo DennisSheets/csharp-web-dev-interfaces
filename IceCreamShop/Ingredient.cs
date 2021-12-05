@@ -20,12 +20,23 @@ namespace IceCreamShop
         {
             //return "Name: " + Name + "\n" + "Cost: $" + Cost + "\n" + "Allergens: " + Allergens + "\n";
 
+
+                //string allergensToString = "";
+                //foreach (string allergen in Allergens)
+                //{
+                //    allergensToString += allergen + " ";
+                //}
+                //while (Name.Length < 18)
+                //{
+                //    Name += " ";
+                //}
+            //return $"{Name} {String.Format("${0:0.00}", Cost)} {allergensToString} ";
+
+
             return  $"{String.Format("{0,-18}", Name)} " +
+                    $"{String.Format("{0,-6:C2} ", Cost)}  " +
+                    $"  Allergens: {string.Join(" ", Allergens)}";
 
-                    $"{String.Format("${0:0.00}", Cost)}  " +   //same result as the line below
-                    //$"{String.Format("{0,-6:C2} ", Cost)}  " +
-
-                    $"  Allergens: {string.Join(" ", Allergens)}"; 
         }
     }
 }
